@@ -4,3 +4,6 @@ services:
 
 before_install:
   - docker build -t advortco/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run advortco/docker-react npm run test -- --coverage
